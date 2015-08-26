@@ -8,6 +8,18 @@
 <script type="javascript" src="js/jquery-1.7.2.min.js"></script> 
 <script type="javascript" src="js/move-top.js"></script>
 <script type="javascript" src="js/easing.js"></script>
+<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+<script type="text/javascript">
+    var map;
+
+    DG.then(function () {
+        map = DG.map('map', {
+            center: [46.48062007918, 30.743592292145],
+            zoom: 17
+        });
+		DG.marker([46.48062007918, 30.743592292145]).addTo(map).bindPopup('com-PLEX');
+    });
+</script>
 </head>
 <body>
   <div class="wrap">
@@ -116,9 +128,12 @@
 				<div class="col span_1_of_3">
 					<div class="contact_info">
     	 				<h3>Вы можете найти нас здесь</h3>
-					    	  <div class="map">
+					    	  <!--<div class="map">
 							   	    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.399390484449!2d30.743756999999988!3d46.48040350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6319ed22e4375%3A0xeea648cb18bf8fca!2z0LLRg9C7LiDQkdGD0L3RltC90LAsIDEzLCDQntC00LXRgdCwLCDQntC00LXRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjA!5e0!3m2!1suk!2sua!4v1438591504277" width="320" height="320" frameborder="0" style="border:0" allowfullscreen></iframe><br>
-							  </div>
+							  </div>-->
+							<body>
+								<div id="map" style="width:300px; height:400px"></div>
+							</body>
       				</div>
       			<div class="company_address">
 				     	<h3>Информация о компани :</h3>
